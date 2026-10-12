@@ -1,0 +1,178 @@
+/* ---------- GLOBAL RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* ---------- BODY ---------- */
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+  background: linear-gradient(to right, #434343, #000000);
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+/* ---------- SEARCH CONTROLS ---------- */
+.search__controls {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#searchInput {
+  width: 320px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  font-size: 16px;
+  outline: none;
+}
+
+#searchInput:focus {
+  border-color: #00ff88;
+  box-shadow: 0 0 6px #00ff88;
+}
+
+.price__filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#priceRange {
+  width: 320px;
+  accent-color: #00ff88;
+}
+
+/* ---------- CAR GRID ---------- */
+.cars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 25px;
+}
+
+.cars[hidden] {
+  display: none;
+}
+
+/* ---------- CAR CARD ---------- */
+.car {
+  background-color: #1e1e1e;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 260px;
+  padding: 15px;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.car:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 255, 136, 0.3);
+}
+
+.car img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+/* ---------- PRICE ---------- */
+.price {
+  color: #00ff88;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+  #searchInput,
+  #priceRange {
+    width: 90%;
+  }
+
+  .car {
+    width: 90%;
+  }
+}
+
+.spinner {
+  border: 4px solid #333;
+  border-top: 4px solid #00ff88;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.skeleton {
+  animation: pulse 1.5s infinite;
+}
+
+.img-skeleton {
+  width: 100%;
+  height: 150px;
+  background: #333;
+  border-radius: 6px;
+}
+
+.text-skeleton {
+  height: 20px;
+  background: #333;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.text-skeleton.short {
+  width: 50%;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}

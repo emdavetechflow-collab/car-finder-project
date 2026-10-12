@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Finder</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <h1>Find Your Dream Car</h1>
+        <p>Search and filter cars by name or price range</p>
+
+        <div class="search__controls">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search cars..."
+            autocomplete="off"
+          />
+
+          <div class="price__filter">
+            <label for="priceRange">
+              Max Price: <span id="priceValue">$100000</span>
+            </label>
+
+            <input
+              type="range"
+              id="priceRange"
+              min="5000"
+              max="100000"
+              step="5000"
+              value="100000"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div id="loading" class="loading">
+        <div class="spinner"></div>
+      </div>
+
+      <section id="carsContainer" class="cars"></section>
+    </main>
+  </body>
+</html>
