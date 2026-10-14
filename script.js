@@ -200,7 +200,7 @@ async function loadCars() {
       );
     }
 
-    // CLEAN UI VERSION — SHORT, PROFESSIONAL, NO LONG PARAGRAPH
+  
     dataStatus.textContent = `Vehicle data successfully verified using the NHTSA vPIC API (${allCars.length} models matched).`;
 
     carsLoaded = true;
